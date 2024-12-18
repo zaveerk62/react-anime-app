@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.span {
+ @apply bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-xl text-transparent font-bold rounded-md;
+} 
