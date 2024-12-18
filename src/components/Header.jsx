@@ -6,13 +6,11 @@ import { Link } from 'react-router-dom';
 const Header = ({ setRendered }) => {
   
   const { state, actions, handlers } = useGlobalContext();
-  console.log(state);
   const { search } = state;
 
   const handleSearchChange = (e) => {
   
     handlers.handleSearch(e);
-    // actions.searchAnime(e.target.value);
   };
 
   const handleSubmit = (e) => {

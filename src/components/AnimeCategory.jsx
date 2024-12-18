@@ -3,10 +3,10 @@ import  { useEffect } from 'react';
 import { useGlobalContext } from '../context/globalContext';
 import AnimeGrid from './AnimeGrid';
 
-const AnimeCategory = ({ rendered, isSearching }) => {
+const AnimeCategory = ({ rendered }) => {
   const { state, actions } = useGlobalContext();
   
-  const { popularAnime, upcomingAnime, airingAnime, searchResults, loading} = state;
+  const { popularAnime, upcomingAnime, airingAnime, loading} = state;
   const { getPopularAnime, getUpcomingAnime, getAiringAnime } = actions;
 
   useEffect(() => {

@@ -8,8 +8,6 @@ const AnimeGrid = ({ animeList, rendered }) => {
   const { state } = useGlobalContext();
   const {searchResults, isSearching, popularAnime, upcomingAnime, airingAnime} = state;
 
-
-  console.log("Rendering AnimeGrid with:", animeList);
   if (!isSearching) {
     if (rendered === 'popular') animeList = popularAnime;
     if (rendered === 'airing') animeList = airingAnime;
