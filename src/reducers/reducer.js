@@ -1,5 +1,6 @@
 export const ACTIONS = {
   LOADING: 'loading',
+  GET_GENRES: 'get-genres',
   GET_POPULAR_ANIME: 'get-popular-anime',
   GET_UPCOMING_ANIME: 'get-upcoming-anime',
   GET_AIRING_ANIME: 'get-airing-anime',
@@ -19,10 +20,12 @@ export const reducer = (state, action) => {
     case ACTIONS.GET_AIRING_ANIME:
       return { ...state, airingAnime: Array.isArray(action.payload) ? action.payload : [], loading: false };
     case ACTIONS.SEARCH_ANIME:
-      console.log('Reducer: Search Results', action.payload);
       return { ...state, searchResults:Array.isArray(action.payload) ? action.payload : [], loading: false };
       case ACTIONS.SET_SEARCH:
         return { ...state, search: action.payload };
+        case ACTIONS.GET_GENRES:
+          console.log('Reducer: Genres', action.payload);
+          return { ...state, genres: Array.isArray(action.payload) ? action.payload : [], loading: false };
     default:
       return state;
   }
